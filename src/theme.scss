@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+// default colors
+.theme-wrapper {
+  --color: white;
+  --background: black;
+  --defaultFont : 'Work Sans', sans-serif;
+}
+
+$variables: (
+  --color: var(--color),
+  --background: var(--background),
+  --defaultFont : var(--defaultFont)
+);
+
+@function var($variable) {
+    @return map-get($variables, $variable);
+}

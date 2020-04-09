@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ThemingService } from './services/theming.service';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Trial';
+
+  constructor(
+    public themeService: ThemingService,
+    public authService : AuthService
+    ) {
+
+  }
+
+  changeTheme(t) {
+    this.themeService.change(t);
+  }
 }

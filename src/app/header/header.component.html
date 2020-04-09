@@ -1,0 +1,4 @@
+<div class="header">
+    Welcome | {{ isLoggedIn ? 'User is online and logged in' : 'Offline'}} | {{pollingStatus}}
+    <button *ngIf="isLoggedIn" (click)="auth.setLoggedIn(false);"> Logout </button>
+</div>

@@ -1,0 +1,8 @@
+<div class="search">
+    <input type="text"  #searchBox  placeholder="Start searching names " class="form-control">
+    <div class="box" *ngIf="results && results.length > 0">
+        <ul >
+            <li *ngFor="let r of results"> {{r}}</li>         
+    </ul>
+    </div>
+</div>
